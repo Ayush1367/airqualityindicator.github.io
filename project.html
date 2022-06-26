@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Quality Indicator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="root">
+        <div class="heading">
+            <h1>Air Quality Indicator</h1>
+        </div>
+        <div class="error">
+            <label for="error-msg" style="color: red;"></label><br>
+        </div>
+        <div class="loc-container">
+            <h2 class="sub-heading">Your location &nbsp;&#187;&nbsp;</h2>
+            <input 
+            type="number" 
+            placeholder="Latitude" 
+            id="latitude" 
+            step="0.0001"
+            class="loc-input" 
+            name="lat" />
+
+            <input 
+            type="number"
+            placeholder="Longitude" 
+            id="longitude" 
+            step="0.0001" 
+            class="loc-input" 
+            name="lon" />
+
+            <button class="search-btn">Search</button>
+        </div>
+        <div class="air-info">
+            <h2 class="sub-heading">Air Quality Index :</h2>
+            <span class="air-quality">...</span>
+            <span class="arr">&nbsp;&rarr;&nbsp;</span>
+            <span class="air-quality-status">...</span>
+        </div>
+        <div class="component-container">
+            <h2 class="sub-heading">
+                Pollutants and their concentration in air
+                &nbsp;&#187;&nbsp;
+            </h2>
+            <div>
+                <h3 class="component-names">
+                    Carbon Monoxide :
+                </h3>
+                <span class="component-val" data-comp="co"></span>
+            </div>
+            <div>
+                <h3 class="component-names">
+                    Nitrogen Monoxide :
+                </h3>
+                <span class="component-val" data-comp="no"></span>
+            </div>
+            <div>
+                <h3 class="component-names">
+                    Nitrogen Dioxide :
+                </h3>
+                <span class="component-val" data-comp="no2"></span>
+            </div>
+            <div>
+                <h3 class="component-names">
+                    Ozone :
+                </h3>
+                <span class="component-val" data-comp="o3"></span>
+            </div>
+            <div>
+                <h3 class="component-names">
+                    Sulphur Dioxide :
+                </h3>
+                <span class="component-val" data-comp="so2"></span>
+            </div>
+            <div>
+                <h3 class="component-names">
+                    Fine particles matter :
+                </h3>
+                <span class="component-val" data-comp="pm2_5"></span>
+            </div>
+            <div>
+                <h3 class="component-names">
+                    Coarse particulate matter :
+                </h3>
+                <span class="component-val" data-comp="pm10"></span>
+            </div>
+            <div>
+                <h3 class="component-names">
+                    Ammonia :
+                </h3>
+                <span class="component-val" data-comp="nh3"></span>
+            </div>
+        </div>
+        <footer class="foot">
+			Plant more <img src="images/tree.svg" width="55" height="55" />
+		</footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
